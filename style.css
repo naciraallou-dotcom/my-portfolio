@@ -1,0 +1,345 @@
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --primary-color: #e63946;
+    --card-bg: #f5f5f5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#theme-toggle {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Hero */
+.hero-section {
+    min-height: 80vh;
+    padding: 100px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 550px;
+}
+
+.hero-content h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.hero-content a {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.hero-image img {
+    width: 340px;
+    height: 340px;
+    object-fit: cover;
+     object-position: center 20%;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+/* About Me */
+.about-section {
+    padding: 100px 10%;
+    background-color: var(--card-bg);
+}
+
+.grid-about {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.title-about h2 {
+    font-size: 40px;
+}
+
+.text-about {
+    line-height: 1.8;
+}
+
+.text-about p {
+    margin-bottom: 20px;
+}
+.dark-mode {
+    --bg-color: #121212;
+    --text-color: #ffffff;
+    --card-bg: #1e1e1e;
+}
+/* Skills */
+.skills-section {
+    padding: 100px 10%;
+    background-color: var(--bg-color);
+}
+.grid-skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 30px;
+}
+.skill-card {
+    background: rgba(128, 128, 128, 0.05);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    text-align: center;
+}
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+.skills-section img {
+    width: 110px !important;
+    height: 110px !important;
+    object-fit: contain !important;
+    display: block;
+    margin: 0 auto 15px;
+}
+/* ترتيب Skills */
+.grid-skills {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+/* حجم جميع Logos */
+.skills-section img {
+    width: 80px !important;
+    height: 80px !important;
+    object-fit: contain !important;
+    display: block;
+    margin: 0 auto 15px;
+}
+
+/* Cards */
+.skill-card {
+    min-height: 180px;
+    padding: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/* =========================
+   Projects Section
+   ========================= */
+
+.projects-section {
+    padding: 100px 10%;
+    background-color: var(--card-bg);
+}
+
+.projects-section h2 {
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+}
+/* Project Card */
+
+.project-card {
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* Project Image */
+
+.project-img-wrapper {
+    overflow: hidden;
+}
+
+.project-img-wrapper img {
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+/* Image Hover Effect */
+
+.project-card:hover .project-img-wrapper img {
+    transform: scale(1.08);
+}
+ object-position: center 20%;
+ /* Project Button */
+
+.outline-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    text-decoration: none;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.outline-btn:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+/* =========================
+   Contact Section
+   ========================= */
+
+.contact-section {
+    padding: 100px 10%;
+    background-color: var(--bg-color);
+}
+
+.contact-section h2 {
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+
+/* Contact Form */
+#contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Inputs */
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: inherit;
+    background-color: var(--card-bg);
+    color: var(--text-color);
+}
+
+/* Message Box */
+#contact-form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+/* Send Button */
+#contact-form button {
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#contact-form button:hover {
+    transform: translateY(-3px);
+    opacity: 0.9;
+}/* =========================
+   Responsive Design
+   ========================= */
+
+@media (max-width: 768px) {
+
+    /* Navbar */
+    nav {
+        padding: 20px 5%;
+    }
+
+    /* Hero */
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 50px;
+        padding: 70px 5%;
+    }
+
+    .hero-content h1 {
+        font-size: 40px;
+    }
+
+    /* About */
+    .about-section {
+        padding: 70px 5%;
+    }
+
+    .grid-about {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .title-about h2 {
+        font-size: 35px;
+    }
+
+    /* Skills */
+    .skills-section {
+        padding: 70px 5%;
+    }
+
+    .grid-skills {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    /* Projects */
+    .projects-section {
+        padding: 70px 5%;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Contact */
+    .contact-section {
+        padding: 70px 5%;
+    }
+
+}

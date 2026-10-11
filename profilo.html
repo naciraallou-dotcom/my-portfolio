@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">Nacira</div>
+
+        <button id="theme-toggle">Dark Mode</button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+
+        <div class="hero-content">
+            <h1>Nacira</h1>
+
+            <p>
+                Hello! I'm Nacira, a passionate developer who loves
+                creating modern and beautiful websites.
+            </p>
+
+            <a href="#work">View My Work</a>
+
+           <a href="#contact">Contact Me</a>
+        </div>
+
+        <div class="hero-image">
+            <img src="image.png" alt="My photo">
+        </div>
+
+    </section>
+    <!-- About Me -->
+<section id="about" class="about-section">
+    <div class="grid-about">
+
+        <div class="title-about">
+            <h2>About Me</h2>
+        </div>
+
+        <div class="text-about">
+            <p>
+                I'm a passionate developer who enjoys creating
+                modern and user-friendly websites.
+            </p>
+
+            <p>
+                I have an interest in web development, programming,
+                and learning new technologies.
+            </p>
+        </div>
+
+    </div>
+</section>
+<section id="skills" class="skills-section">
+        <h2>My skills </h2>
+        <div class="skills-container">
+            <div class="grid-skills">
+
+                <div class="skill-card">
+                    <img src="html.png" alt="HTML">
+                    <h3>HTML</h3>
+                </div>
+                <div class="skill-card">
+                    <img src="css.png" alt="CSS">
+                    <h3>CSS</h3>
+                </div>
+                <div class="skill-card">
+                    <img src="javascript.png" alt="JavaScript">
+                    <h3>JavaScript</h3>
+                </div>
+                <div class="skill-card">
+                    <img src="python.png" alt="Python">
+                    <h3>Python</h3>
+                </div>
+                <div class="skill-card">
+                    <img src="c.png" alt="C">
+                    <h3>C</h3>
+                </div>
+                <div class="skill-card">
+                    <img src="sql.png" alt="SQL">
+                    <h3>SQL</h3>
+                </div>
+                <div class="skill-card">
+                    <img src="cpp.png" alt="C++">
+                    <h3>C++</h3>
+                </div>
+                <div class="skill-card">
+                    <img src="database.png" alt="Database">
+                     <h3>Database</h3>
+                </div>
+            </div>
+        </div>
+</section>
+<section id="projects" class="projects-section">
+    <h2>My Projects</h2>
+    <div class="projects-grid">
+        <div class="project-card">
+           <div class="project-img-wrapper">
+               <img src="arduino-project.png" alt="Arduino Robotics Project">
+           </div>
+        <div class="info-project">
+
+              <h3>Arduino Robotics Project</h3>
+              <p>
+               A practical robotics project exploring Arduino programming,
+               electronics, sensors, and hardware integration.
+              </p>
+              <a href="#" class="outline-btn">View Project</a>
+        </div>
+    </div> 
+        <div class="project-card">
+            <div class="project-img-wrapper">
+                <img src="web-develepement.png" alt="Project 2">        
+            </div>
+            <div class="info-project">
+                <h3>My Second Project</h3>
+                <p>
+                    Another project that shows my skills
+                    in programming and web development.
+                </p>
+
+                <a href="#" class="outline-btn">View Project</a>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- Contact Section -->
+<section id="contact" class="contact-section">
+
+    <h2>Contact Me</h2>
+
+    <form id="contact-form">
+
+        <input type="text" id="name" placeholder="Your Name" required>
+
+        <input type="email" id="email" placeholder="Your Email" required>
+
+        <textarea id="message" placeholder="Your Message" required></textarea>
+
+        <button type="submit">Send Message</button>
+
+    </form>
+
+</section>      
+<script>
+   /* const themeToggle = document.getElementById("theme-toggle");
+    const body = document.body;
+
+    themeToggle.addEventListener("click", () => {
+        body.style.backgroundColor = "black";
+        body.style.color = "white";
+    });
+    */
+    const themeToggle = document.getElementById("theme-toggle");
+    const body = document.body;
+
+    themeToggle.addEventListener("click", () => {
+        body.classList.toggle("dark-mode");
+
+        if (body.classList.contains("dark-mode")) {
+            localStorage.setItem("theme", "dark");
+        } else {
+            localStorage.setItem("theme", "light");
+        }
+    });
+
+    // Contact Form
+    const contactForm = document.getElementById("contact-form");
+
+    contactForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        alert("Thank you! Your message has been sent.");
+
+        contactForm.reset();
+    });
+</script>
+</body>
+</html>
