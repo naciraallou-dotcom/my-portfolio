@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function RechecheElement(tab,valeur){
+        for(let i=0;i<tab.length;i++){
+            if(tab[i]===valeur){
+                return true;
+            }
+            else
+                return false;
+        }  
+       
+    }
+    let e=Number(prompt("entrer un nomber"));
+    let tableau=[12,3,4,5,5,6];
+    console.log(RechecheElement(tableau,e));
+</script>
+<body>
+    
+</body>
+</html>

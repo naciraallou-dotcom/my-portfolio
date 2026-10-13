@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function TrierTableau(obj) {
+  // Étape 1 : Transformer l'objet en tableau [clé, valeur]
+  let entries = [];
+  for (let key in obj) {
+    entries.push([key, obj[key]]);
+  }
+
+  // Étape 2 : Tri manuel avec deux boucles for
+  for (let i = 0; i < entries.length - 1; i++) {
+    for (let j = 0; j < entries.length - i - 1; j++) {
+      if (entries[j][1] > entries[j + 1][1]) {
+        let temp = entries[j];
+        entries[j] = entries[j + 1];
+        entries[j + 1] = temp;
+      }
+    }
+  }
+
+  // Étape 3 : Recréer l'objet trié
+  let objTrie = {};
+  for (let i = 0; i < entries.length; i++) {
+    objTrie[entries[i][0]] = entries[i][1];
+  }
+
+  return objTrie;
+}
+
+let age = { a: 56, b: 33, c: 3, d: 16, e: 15 };
+let resultat = TrierTableau(age);
+console.log(resultat);
+
+
+</script>
+<body>
+    
+</body>
+</html>

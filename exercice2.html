@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+
+<body>
+     <div id="container"></div>
+    <script>
+       const container = document.getElementById('container');
+       const card = document.createElement('div');
+       const titre = document.createElement('h2');
+       const paragraphe = document.createElement('p');
+       card.className ='card';
+       titre.textContent ='titre';
+       paragraphe.textContent='description ici';
+       card.appendChild(titre);
+       card.appendChild(paragraphe);
+       container.appendChild(card);
+    </script>
+   
+</body>
+</html>

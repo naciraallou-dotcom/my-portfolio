@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function recherchelement(tab,valeur){
+      for(let i=0;i<tab.length;i++){
+        if(tab[i]===valeur){
+           return true;
+        }
+        else
+           return false;
+      }
+    }
+    let e=window.prompt("entre le nombre");
+    let tab=[12,3,43,5];
+    console.log(recherchelement(tab,e));
+</script>
+<body>
+    
+</body>
+</html>

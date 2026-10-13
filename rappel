@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+</head>
+<body>
+    <script>
+        function trietableau(obj){
+            let entries = [];
+            for (let key in obj){
+                entries.push([key, obj[key]]);
+            }
+            for(let i = 0; i < entries.length - 1; i++){
+                for(let j = i + 1; j < entries.length; j++){
+                    if(entries[i][1] > entries[j][1]){
+                        let temp = entries[i];
+                        entries[i] = entries[j];
+                        entries[j] = temp;
+                    }
+                }
+                
+            }
+        }
